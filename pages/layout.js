@@ -6,11 +6,10 @@ import Header from '@/components/Header'; // Assuming your components are in the
 import Footer from '@/components/Footer'; 
 
 // Define metadata for ALL pages
-export const metadata: Metadata = {
+export const metadata = {
   title: "Luke Ponga's Portfolio",
   description: "Luke Ponga - Junior Software Developer",
 };
-
 // Set up the font
 const inter = Inter({ subsets: ['latin'] });
 
