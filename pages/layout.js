@@ -1,4 +1,5 @@
 // These styles apply to every route in the application
+import Html from 'next/document';
 
 export default function RootLayout({ children }) {
   return (
