@@ -1,33 +1,27 @@
-// These styles apply to every route in the application
-import Html from 'next/document';
-import Head from 'next/head';
+// app/layout.js
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import '../styles/globals.css';
+import Header from '@/components/Header'; // Assuming your components are in the 'components' directory
+import Footer from '@/components/Footer'; 
+
+// Define metadata for ALL pages
+export const metadata: Metadata = {
+  title: "Luke Ponga's Portfolio",
+  description: "Luke Ponga - Junior Software Developer",
+};
+
+// Set up the font
+const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({ children }) {
   return (
-    <Html lang="en">
-      <Head>
-        <title>Luke Ponga's Portfolio</title>
-        <meta
-          name="description"
-          content="Luke Ponga - Junior Software Developer"
-        />
-        <link rel="icon" href="headerimg.ico" />
-        {/* Additional metadata for SEO and social sharing */}
-        <meta property="og:title" content="Luke Ponga's Portfolio" />
-        <meta
-          property="og:description"
-          content="Luke Ponga - Junior Software Developer"
-        />
-        <meta property="og:image" content="../public/headerimg.ico" />{" "}
-        {/* Replace with your image path */}
-        <meta property="og:url" content="Https://www.lukeponga.space/" />
-        <meta property="og:type" content="website" />
-        <meta name="Developer" content="@lukeponga" />
-      </Head>
-      <body>
-        <Main />
-        <NextScript />
+    <html lang="en">
+      <body className={inter.className}>
+        <Header />
+        {children}
+        <Footer />
       </body>
-    </Html>
+    </html>
   );
 }
