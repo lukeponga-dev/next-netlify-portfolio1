@@ -1,5 +1,5 @@
 // app/layout.js
-import type { Metadata } from 'next';
+import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import '../styles/globals.css';
 import Header from '@/components/Header'; // Assuming your components are in the 'components' directory
